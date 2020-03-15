@@ -291,7 +291,9 @@ class AudioList(ItemList):
 
     def _filter_empty(items):
         def _filter(fn: Path) -> bool:
-            return os.path.exists(fn) and os.path.getsize(fn) > 0
+            #print(fn)
+#             return os.path.exists(fn) and os.path.getsize(fn) > 0
+            return True
 
         old_count = len(items)
         items = list(filter(_filter, items))
